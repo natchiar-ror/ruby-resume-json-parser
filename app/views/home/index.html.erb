@@ -1,6 +1,26 @@
-<%= @result  %>
-<br/>
-<h2>Result:</h2>
-Name: <%= @result["basics"]["name"]  %><br/>
-Label:  <%= @result["basics"]["label"]  %>
 
+
+<h1>Step 1:</h1>
+
+<%= button_to 'Download', controller: 'home',action: 'initial_json' %>
+
+
+
+<h1>Step 2:</h1>
+
+Upload the Updated json file
+<%= form_tag({action: "generate_resume_display"}, method: "post", multipart: true) do %>
+ <%= file_field_tag :resume %> 
+ <%= submit_tag "Upload Json"%>
+ <% end %>
+ 
+ 
+ <h1>Step 3:</h1>
+ 
+View  the resume:
+
+<%= link_to "View Resume", controller: "home", action: "display_resume" %>
+ 
+
+ 
+ 
