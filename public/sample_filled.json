@@ -1,0 +1,55 @@
+{
+
+  "basics": {
+    "name": "Name of the Employee",
+    "label": "Technical Lead",
+    "picture": "",
+    "email": "employee-email@gmail.com",
+    "phone": "234-111-890",
+    "website": "",
+    "summary": "Working in IT industry for the past 10+ past yrs with a string knowledge in BAckend technologies as well Ui technologies.Worked as a Teqam lead for almost 5yrs with Lead experiance for handling a team of 5 to 6.",
+    "location": {
+      "address": "address Line 1",
+      "postalCode": "627003",
+      "city": "cityname",
+      "countryCode": "91",
+      "region": "region"
+    }
+  },
+  "work": [
+{
+    "company": "Company1",
+    "position": "",
+    "website": "",
+    "startDate": "",
+    "endDate": "",
+    "summary": "",
+    "highlights": [
+      ""
+    ],
+    "projects":[
+	{
+    "name": "",
+    "duration": "",
+    "description": ""
+    }
+    ]
+},
+{
+    "company": "Company2",
+    "position": "",
+    "website": "",
+    "startDate": "",
+    "endDate": "",
+    "summary": "",
+    "highlights": [
+      ""
+    ],
+    "projects":[{
+    "name": "",
+    "duration": "",
+    "description": ""
+    }
+]
+  }]
+}

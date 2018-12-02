@@ -22,5 +22,10 @@ class HomeController < ApplicationController
 		@final_result = JSON.parse(@attachment.data)
 		end
 	end
+	
+	def filled_json
+		send_file(Rails.root+'public/sample_filled.json', disposition: 'attachment')
+	end
+	
  
 end
