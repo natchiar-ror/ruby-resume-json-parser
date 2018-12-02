@@ -1,37 +1,89 @@
+<style type="text/css">
+	* { margin: 0; padding: 0; }
+	body { font: 16px Helvetica, Sans-Serif; line-height: 24px;}
+	.clear { clear: both; }
+	#page-wrap { width: 800px; margin: 40px auto 60px; }
+	#pic { float: right; margin: -30px 0 0 0; }
+	h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+	h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+	h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+	p { margin: 0 0 16px 0; }
+	a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+	a:hover { border-bottom-style: solid; color: black; }
+	ul { margin: 0 0 32px 17px; }
+	#objective { width: 500px; float: left; }
+	#objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+	dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+	dd { width: 600px; float: right; }
+	dd.clear { float: none; margin: 0; height: 15px; }
+</style>
+
+<div id="page-wrap">
+
+	<div id="contact-info" class="vcard">
+		<h1 class="fn"><%= @final_result["basics"]["name"]%></h1>
+		<p>
+		Cell: <span class="tel"><%= @final_result["basics"]["phone"]%></span><br />
+		Email: <a class="email" href="mailto:<%= @final_result["basics"]["email"]%>"><%= @final_result["basics"]["email"]%></a>
+		</p>
+	</div>
+
+	<div id="objective">
+		<p>
+		<%= @final_result["basics"]["summary"]%>
+		</p>
+	</div>
+	
+	<div class="clear"></div>
+
+<dl>
+	<dd class="clear"></dd>
+
+	<dt>Education</dt>
+	<dd>
+	<% @final_result["education"].each do |education| %>
+
+	<h2><%= education["institution"]%></h2>
+	<p><strong>Major:</strong> <%= education["area"]%><br />
+	<strong>GPA:</strong><%= education["gpa"] %></p>
 
 
-<h1><%= @final_result["basics"]["name"]%></h1>
+	<% end %>
+	</dd>
+	<dd class="clear"></dd>
 
-<p><%= @final_result["basics"]["summary"]%><br/></p>
+	<dt>Experience</dt>
+	<dd>
 
+	<% @final_result["work"].each do |work| %>
+	<h2><%= work["company"]%> <span><%= work["website"]%></span></h2>
+	<ul>
+	<li>Position: <%= work["position"]%></li>
+	<li><%= work["summary"]%></li>
+	</ul>
+		<% work["projects"].each do |project| %>
+		<h2><%= project["name"]%> <span><%= project["duration"]%></span></h2>
+		<ul>
+		<li><%= project["description"]%></li>
+		</ul>
+		<% end %>
+	<% end %>
+	</dd>
+	<dd class="clear"></dd>
 
-<h2>Work Experiance</h2>
-<% @final_result["work"].each do |work| %>
+	<dt>References</dt>
+	<% @final_result["references"].each do |reference|%>
+	<dd>
+	<ul>
+		<li><%= reference["name"] %></li>
+		<li><%= reference["reference"] %></li>
+		</ul>
+	</dd>
+	<% end %>
 
-<h3>Company :<%= work["company"]%><br/> </h3>
-Position : <%= work["position"]%><br/>
-Duration : <%= work["startDate"]%> - <%= work["endDate"]%><br/>
+	<dd class="clear"></dd>
+</dl>
 
-<h2>Project Details</h2>
+<div class="clear"></div>
 
-<% work["projects"].each do |project|%>
-
-Project Name: <%= project["name"]%><br/>
-Project Duration: <%= project["duration"]%><br/>
-Description: <%= project["description"]%><br/>
-<hr/>
-
-<% end %>
-
-
-
-
-<% end %>
-
-
-<h2>Personal Details</h2>
-
-Name : <%= @final_result["basics"]["name"]%><br/>
-Email: <%= @final_result["basics"]["email"]%><br/>
-Phone: <%= @final_result["basics"]["phone"]%><br/>
-
+</div>

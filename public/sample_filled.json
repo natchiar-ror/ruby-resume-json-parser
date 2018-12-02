@@ -19,37 +19,86 @@
   "work": [
 {
     "company": "Company1",
-    "position": "",
-    "website": "",
-    "startDate": "",
-    "endDate": "",
-    "summary": "",
+    "position": "Technical Lead",
+    "website": "http://www.company1.com",
+    "startDate": "2013-01-01",
+    "endDate": "2015-01-01",
+    "summary": "Summary of the experiance in the company1",
     "highlights": [
       ""
     ],
     "projects":[
 	{
-    "name": "",
-    "duration": "",
-    "description": ""
+    "name": "project1",
+    "duration": "2yrs",
+    "description": "Roles and responsibilities of project1 wigh project description...."
     }
     ]
 },
 {
     "company": "Company2",
-    "position": "",
-    "website": "",
-    "startDate": "",
-    "endDate": "",
-    "summary": "",
+    "position": "Lead Engineer",
+    "website": "http://www.company2.com",
+    "startDate": "2015-01-01",
+    "endDate": "2019-01-01",
+    "summary": "Summary of the experiance in the company2",
     "highlights": [
       ""
     ],
     "projects":[{
-    "name": "",
-    "duration": "",
-    "description": ""
+    "name": "project from company2",
+    "duration": "3 yrs",
+    "description": "Roles and responsibilities of project1 wigh project description...."
     }
 ]
-  }]
+  }],
+  "education": [
+  {
+    "institution": "Name of College",
+    "area": "Computer Science",
+    "studyType": "FullTime",
+    "startDate": "",
+    "endDate": "",
+    "gpa": "8.0",
+    "courses": [
+      "Bachelour Of Engineering"
+    ]
+  },
+  {
+    "institution": "Name of School",
+    "area": "Computer Science",
+    "studyType": "FullTime",
+    "startDate": "",
+    "endDate": "",
+    "gpa": "9.0",
+    "courses": [
+      "Higher Secondary School Leaving Certificate"
+    ]
+  }
+  ],
+   "skills": [{
+    "name": "",
+    "level": "",
+    "keywords": [
+      "",
+      "",
+      ""
+    ]
+  }],
+  "interests": [{
+    "name": "",
+    "keywords": [
+      "",
+      ""
+    ]
+  }],
+  "references": [{
+    "name": "Name1",
+    "reference": "993452627"
+  },
+  {
+    "name": "Name2",
+    "reference": "993452627"
+  }
+  ]
 }
