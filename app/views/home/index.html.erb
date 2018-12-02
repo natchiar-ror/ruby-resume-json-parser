@@ -1,6 +1,7 @@
 
 
 <h1>Step 1:</h1>
+Download Sample json to fill in your details:
 
 <%= button_to 'Download', controller: 'home',action: 'initial_json' %>
 
@@ -11,15 +12,17 @@
 Upload the Updated json file
 <%= form_tag({action: "generate_resume_display"}, method: "post", multipart: true) do %>
  <%= file_field_tag :resume %> 
- <%= submit_tag "Upload Json"%>
- <% end %>
+ 
  
  
  <h1>Step 3:</h1>
  
 View  the resume:
 
-<%= link_to "View Resume", controller: "home", action: "display_resume" %>
+<%= submit_tag "Generate Resume"%>
+ <% end %>
+
+<%#= link_to "View Resume", controller: "home", action: "display_resume" %>
  
 
  

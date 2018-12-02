@@ -21,7 +21,8 @@
       "url": "http://twitter.com/john"
     }]
   },
-  "work": [{
+  "work": [
+  {
     "company": "Company",
     "position": "President",
     "website": "http://company.com",
@@ -30,8 +31,46 @@
     "summary": "Description...",
     "highlights": [
       "Started the company"
-    ]
-  }],
+    ],
+	  "projects":[{
+	  "name": "project1",
+	  "duration": "1 yr",
+	  "descriptiom": "project description goes here"
+	  },
+	  {
+	  "name": "project2",
+	  "duration": "1 yr",
+	  "descriptiom": "project description goes here"
+	  }
+	  ]
+  }
+  
+  , {
+    "company": "Company2",
+    "position": "Manager",
+    "website": "http://xxx.com",
+    "startDate": "2013-01-01",
+    "endDate": "2014-01-01",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company"
+    ],
+	  "projects":[{
+	  "name": "project1",
+	  "duration": "1 yr",
+	  "descriptiom": "project description goes here"
+	  },
+	  {
+	  "name": "project2",
+	  "duration": "1 yr",
+	  "descriptiom": "project description goes here"
+	  }
+	  ]
+  }
+  
+  
+  
+  ],
   "volunteer": [{
     "organization": "Organization",
     "position": "Volunteer",

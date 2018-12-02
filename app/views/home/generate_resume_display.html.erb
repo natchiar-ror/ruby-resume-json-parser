@@ -1,1 +1,37 @@
-<%= @result1.inspect %>
+
+
+<h1><%= @final_result["basics"]["name"]%></h1>
+
+<p><%= @final_result["basics"]["summary"]%><br/></p>
+
+
+<h2>Work Experiance</h2>
+<% @final_result["work"].each do |work| %>
+
+<h3>Company :<%= work["company"]%><br/> </h3>
+Position : <%= work["position"]%><br/>
+Duration : <%= work["startDate"]%> - <%= work["endDate"]%><br/>
+
+<h2>Project Details</h2>
+
+<% work["projects"].each do |project|%>
+
+Project Name: <%= project["name"]%><br/>
+Project Duration: <%= project["duration"]%><br/>
+Description: <%= project["description"]%><br/>
+<hr/>
+
+<% end %>
+
+
+
+
+<% end %>
+
+
+<h2>Personal Details</h2>
+
+Name : <%= @final_result["basics"]["name"]%><br/>
+Email: <%= @final_result["basics"]["email"]%><br/>
+Phone: <%= @final_result["basics"]["phone"]%><br/>
+
